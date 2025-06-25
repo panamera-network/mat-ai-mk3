@@ -1,0 +1,1 @@
+// Chat and trade log panel
