@@ -1,0 +1,97 @@
+.mainPanel {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 0;
+  max-width: none;
+  height: 100%; /* pastikan fill vertical parent */
+  padding: 0.5rem; /* p-2 */
+  gap: 0.5rem;
+}
+
+/* Summary and Rings */
+.summaryRings {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 80px;
+}
+
+/* AI Suggestion */
+.aiSuggestion {
+  min-height: 80px;
+}
+
+/* Chart + Tracker */
+.chartTracker {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  min-height: 420px;
+}
+
+.mainChart {
+  flex: 1;
+  min-width: 620px;
+  min-height: 420px;
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trackerSide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 325px;
+}
+
+.csmPanel {
+  flex: 1;
+  min-height: 290px;
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sessionTracker {
+  flex: 1;
+  min-height: 120px;
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Order + Entry Log */
+.orderLog {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 230px;
+}
+
+.orderPanel {
+  flex: 1;
+  min-width: 360px;
+  min-height: 230px;
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entryLog {
+  flex: 1;
+  min-width: 640px;
+  min-height: 230px;
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

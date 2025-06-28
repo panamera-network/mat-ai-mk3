@@ -1,1 +1,0 @@
-// Orb component (voice input button + animation)

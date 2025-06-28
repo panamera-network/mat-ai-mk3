@@ -1,0 +1,86 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Parent area */
+.main-area {
+  display: flex;
+  flex: 1;
+  height: 100%;    /* penting untuk chain full-height */
+  width: 100%;
+}
+
+/* ChatPanel root */
+.chatPanel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;                /* penting: benarkan shrink ikut ruang */
+  min-width: 300px;
+  padding: 0.5rem;              /* p-2 */
+  gap: 0.5rem;
+  height: 100%;                  /* gap-2 */
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* Waveform section (fixed height) */
+.chat-waveform {
+  height: 120px;                /* tukar dari min-height ke fixed height */
+  flex-shrink: 0;               /* elak compress bila skrin kecil */
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.animate-wave {
+  animation: wave 1s infinite ease-in-out;
+  transform-origin: bottom;
+}
+
+
+/* Alert section (fixed height) */
+.chat-alert {
+  height: 120px;
+  flex-shrink: 0;
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chat history: expand/shrink ikut baki ruang */
+.chat-history {
+  flex: 1;                      /* serap ruang lebihan */
+  min-height: 0;                /* allow shrink */
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+  overflow-y: auto;
+}
+
+/* Input area (fixed height) */
+.chat-input {
+  height: 60px;
+  flex-shrink: 0;
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Voice orb section (fixed height) */
+.chat-orb {
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

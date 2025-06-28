@@ -1,1 +1,0 @@
-// Daily goal and risk ring indicator

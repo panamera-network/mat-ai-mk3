@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  @apply bg-gradient-to-br from-[#0f1123] via-[#171a34] to-[#1f2245];
+  color: white;
+}
+
+
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #f43f5e, 0 0 20px #f43f5e, 0 0 30px #f43f5e;
+  }
+  50% {
+    box-shadow: 0 0 20px #f43f5e, 0 0 30px #f43f5e, 0 0 40px #f43f5e;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+.app-header {
+  background-color: transparent;
+  border-bottom: 2px solid #00ffff; /* outline bawah */
+  color: #ffffff !important; /* text/icon color */
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.app-footer {
+  background-color: transparent;
+  border-top: 2px solid #00ffff; /* outline atas */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
